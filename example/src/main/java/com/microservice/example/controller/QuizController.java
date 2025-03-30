@@ -17,7 +17,8 @@ public class QuizController
 	QuizService serv;
 	
 	@PostMapping("create")
-	public ResponseEntity<String> createQuiz(@RequestParam String category, @RequestParam int noOfQue, @RequestParam String title)
+	public ResponseEntity<String> createQuiz
+		(@RequestParam String category, @RequestParam int noOfQue, @RequestParam String title)
 	{
 		return serv.createQuiz(category, noOfQue, title);
 	}
